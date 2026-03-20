@@ -1,0 +1,38 @@
+.products {
+  padding: 60px 40px;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'IBM Plex Sans'
+}
+
+.product-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  font-family: 'IBM Plex Sans'
+}
+
+.product-card {
+  width: 220px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  font-family: 'IBM Plex Sans'
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.product-card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans'
+}
