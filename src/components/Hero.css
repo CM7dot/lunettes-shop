@@ -1,14 +1,41 @@
 .hero {
-  padding: 120px 40px;
+  padding: 140px 40px;
   text-align: center;
   background-image: url("https://originel-eyewear.com/cdn/shop/files/Originel_eyewear_france-lunette_original_tendance_a_petit_prix_1445x.png?v=1732272701");
   background-size: cover;
   background-position: center;
-  color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+
+  height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.20),
+    rgba(0,0,0,0.45)
+  );
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
   font-size: 70px;
+  letter-spacing: -1px;
   margin-bottom: 20px;
   font-style: normal;
   font-family: 'IBM Plex Sans'
@@ -23,12 +50,34 @@
 }
 
 .hero button {
-  padding: 10px 20px;
+  padding: 12px 28px;
   font-size: 20px;
   background: rgb(255, 98, 171);
   color: #ffffff;
   border: none;
+  border-radius: 30px;
   cursor: pointer;
   font-style: oblique;
-  font-family: 'IBM Plex Sans'
+  font-family: 'IBM Plex Sans';
+  transition: all 0.25s ease;
+}
+
+
+.hero button:hover {
+  background: rgb(255, 70, 150);
+  transform: scale(1.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.hero button:active {
+  transform: scale(0.95);
+}
+
+.hero-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.hero h1 span {
+  color: rgb(255, 98, 171);
 }

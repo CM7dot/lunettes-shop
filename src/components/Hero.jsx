@@ -3,9 +3,13 @@ import "./Hero.css";
 function Hero() {
   return (
     <section className="hero">
-      <h1>Trouvez les paires qui vous conviennent</h1>
-      <p>Stylée et classe de facon confortable tout les jours.</p>
-      <button>Voir nos paires</button>
+      <div className="hero-content">
+        <h1>
+          Trouvez les <span>paires parfaites</span> pour vous
+        </h1>
+        <p>Stylées, confortables et tendance au quotidien.</p>
+        <button>Voir nos paires</button>
+      </div>
     </section>
   );
 }
