@@ -1,27 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%;
-  padding: 16px 20px;
+  padding: 16px 0;
   background: rgb(255, 98, 171);
   color: white;
   transition: 0.25s ease;
 }
 
 .navbar.scrolled {
-  padding: 10px 20px;
+  padding: 10px 0;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .nav-container {
   max-width: 1300px;
-  margin: auto;
-  padding: 0 14px; /* espace gauche droite corrigé */
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 
 .logo {
   height: 55px;
@@ -31,8 +45,6 @@
 .navbar.scrolled .logo {
   height: 45px;
 }
-
-/* MENU DESKTOP */
 
 .nav-links {
   display: flex;
@@ -54,18 +66,17 @@
   position: relative;
 }
 
-/* flèche dropdown */
-
 .dropdown::after {
   content: "▼";
   font-size: 10px;
+  margin-top: 4px;
+  margin-left: 4px;
+  transition: transform 0.2s;
 }
 
 .dropdown.open::after {
   transform: rotate(180deg);
 }
-
-/* dropdown */
 
 .dropdown-menu {
   position: absolute;
@@ -97,25 +108,24 @@
   background: rgba(255,255,255,0.18);
 }
 
-/* PANIER */
-
 .cart {
   position: relative;
+  display: flex;
+  align-items: center;
   font-size: 22px;
+  cursor: pointer;
 }
 
 .cart-badge {
   position: absolute;
-  top: -6px;
-  right: -10px;
+  top: -5px;
+  right: -9px;
   background: white;
   color: rgb(255, 98, 171);
   font-size: 10px;
   padding: 2px 6px;
   border-radius: 50%;
 }
-
-/* BURGER */
 
 .menu-icon {
   display: none;
@@ -124,10 +134,6 @@
   color: white;
   padding: 6px;
 }
-
-/* ================= */
-/* MOBILE */
-/* ================= */
 
 @media (max-width: 768px) {
 

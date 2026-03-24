@@ -15,7 +15,6 @@ function Hero() {
   const [index, setIndex] = useState(0);
   const [transition, setTransition] = useState(true);
 
-  // Préchargement images (supprime les bugs de zoom)
   useEffect(() => {
     images.forEach((src) => {
       const img = new Image();

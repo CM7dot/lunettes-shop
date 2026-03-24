@@ -27,7 +27,7 @@ function Products() {
 
   return (
     <section className="products">
-      <h2>Top ventes</h2>
+      <h2>Nouveautés</h2>
 
       <div className="product-grid">
         {products.map((product, index) => (

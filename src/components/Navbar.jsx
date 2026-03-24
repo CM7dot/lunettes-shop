@@ -23,7 +23,7 @@ function Navbar() {
   };
 
   const toggleDropdown = (e) => {
-    e.stopPropagation(); // IMPORTANT
+    e.stopPropagation();
     setDropdownOpen(!dropdownOpen);
   };
 
@@ -34,7 +34,6 @@ function Navbar() {
         <img src={logo} alt="Logo" className="logo" />
 
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <li className="nav-item">Accueil</li>
 
           <li
             className={`nav-item dropdown ${dropdownOpen ? "open" : ""}`}
@@ -43,18 +42,18 @@ function Navbar() {
             Produits
 
             <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-              <li>Lunettes femmes</li>
-              <li>Lunettes hommes</li>
+              <li>Lunettes de vue</li>
+              <li>Lunettes de soleil</li>
               <li>Nouveautés</li>
             </ul>
           </li>
 
           <li className="nav-item">Contact</li>
 
-          <div className="cart">
+          <li className="cart">
             <FiShoppingCart />
             <span className="cart-badge">2</span>
-          </div>
+          </li>
         </ul>
 
         <div className="menu-icon" onClick={toggleMenu}>
